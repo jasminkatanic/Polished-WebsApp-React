@@ -1,0 +1,16 @@
+{
+  "education":[
+    {"level": "Higher Education", "details": [{"title": "Master's Degree", "institution": "International Burch University", "duration": "Duration: 2017 - 2020"},
+      {"title": "Bachelor's Degree", "institution": "International Burch University", "duration": "Duration: 2011 - 2015"}]},
+    {"level": "IT Certification", "details": [{"title": "JavaScript Course", "institution": "Udemy", "duration": "Completion: 2020"},
+      {"title": "Advanced CSS and Sass", "institution": "Udemy", "duration": "Completion: 2020"},
+      {"title": "HTML5 and CSS3", "institution": "Udemy", "duration": "Completion: 2020"},
+      {"title": "Routing and Switching", "institution": "Cisco Networking Academy", "duration": "Completion: 2018"},
+      {"title": "Exploration", "institution": "Cisco Networking Academy", "duration": "Completion: 2013"}]},
+    {"level": "Other Certification", "details": [{"title": "Echolocation Equipment", "institution": "CHEMKOP Institute, Poland", "duration": "Completion: 2016"},
+      {"title": "Termolog Equipment", "institution": "CHEMKOP Institute, Poland", "duration": "Completion: 2016"},
+      {"title": "Gamma Ray Equipment", "institution": "CHEMKOP Institute, Poland", "duration": "Completion: 2016"},
+      {"title": "Caliper Log", "institution": "CHEMKOP Institute, Poland", "duration": "Completion: 2016"},
+      {"title": "Seismic Equipment", "institution": "CTU-IPKIN", "duration": "Completion: 2016"}]}
+  ]
+}

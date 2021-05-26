@@ -1,0 +1,1251 @@
+@import "./variables";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap');
+@import "./mixins";
+
+
+.content{
+  display: flex;
+  width: 100%;
+  height: 560vh; 
+  overflow-y: scroll; 
+  flex-direction: column;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+  @include respond(maxNavBar){
+    height: 560vh;
+  } 
+}
+
+.head{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/hero.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+
+  &-overlay{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: rgba($black-color, .6);
+
+    &-content{
+      display: flex;
+      width: 100%;
+      height: 70%;
+      align-self: center;  
+      flex-direction: column;    
+
+      &-top{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        justify-content: center; 
+        cursor: default;
+
+        &-content{
+          width: auto;
+          display: flex;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 300;
+          color: $dark-white-color;
+          font-size: 7rem;
+          align-self: flex-end;
+
+          @include respond(maxNavBar){
+            font-size: 3.3rem;
+          } 
+        }
+      }
+
+      &-middle{
+        display: flex;
+        width: 100%;
+        height: 15%;
+        justify-content: center;   
+        cursor: default;     
+
+        &-content{
+          width: auto;
+          display: flex;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 300;
+          color: $dark-white-color;
+          font-size: 3rem;
+          align-self: flex-start;
+          margin-top: 1%;
+
+          @include respond(maxNavBar){
+            font-size: 2rem;
+          } 
+        }
+      }
+
+      &-bottom{
+        display: flex;
+        width: 100%;
+        height: 30%;
+        justify-content: center;        
+
+        &-content{
+          width: 100%;
+          display: flex; 
+          align-self: flex-start;    
+          justify-content: center;      
+
+          &-inner{
+            width: 70%;
+            display: flex;
+            justify-content: space-evenly;
+            
+            &-item{
+              padding: 1%;
+              justify-content: center;              
+              background: linear-gradient(to right,  $black-color 50%, $dark-white-color 50%);
+              background-size: 200% 100%;
+              background-position: bottom right;
+              cursor: pointer;
+              box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.5);
+              transition: all .5s;   
+              text-decoration: none;
+              color: $black-color;           
+  
+              &-content{
+                font-family: 'Raleway', sans-serif;
+                font-weight: 500;
+                font-size: 2.5rem;
+                align-self: center;
+                
+              }
+
+              &:hover{                
+                background-position: bottom left;
+                color: $dark-white-color;
+                box-shadow: 13px 10px 15px rgba(255, 255, 255, 0.5);
+              }
+            }
+          }         
+          
+        }
+        @include respond(maxNavBar){
+          display: none;
+        } 
+      }
+    }
+    @include respond(maxNavBar){
+      height: fit-content;
+    }
+  }
+  @include respond(maxNavBar){                                   
+    height: 250px;  
+    background-size: contain; 
+    background-repeat: no-repeat;          
+  }
+}
+
+.about{
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  justify-content: center;
+  background-color: $light-gray-color;
+
+  &-content{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-self: center;
+
+    &-left{
+      display: flex;
+      width: 30%;
+      height: auto;
+      justify-content: flex-end;
+
+      &-img{
+        display: flex;
+        width: auto;
+        height: auto;
+        align-self: center;
+        justify-content: center;
+
+        img{
+          display: flex;
+          align-self: flex-end;          
+          border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+          @include respond(maxNavBar){
+            width: 90%;       
+            margin-top: 2%;
+            border-radius: 0;
+          } 
+        }
+        @include respond(maxNavBar){
+          margin-bottom: 3%;
+        } 
+      }
+
+      @include respond(maxNavBar){
+        width: 100%;        
+        margin-top: 2%;
+      } 
+    }
+
+    &-right{
+      display: flex;
+      width: 65%;
+      height: auto;
+      flex-direction: column;
+      justify-content: center;
+
+      &-top{
+        display: flex;
+        width: 100%;
+        height: auto;
+        cursor: default;
+        
+        &-content{
+          font-size: 2.5rem;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 500;
+          align-self: center;
+          margin-left: 1%;
+
+          @include respond(maxNavBar){                                   
+            font-size: 1.8rem;
+            margin-bottom: 3%;          
+          }
+        }
+      }
+
+      &-middle{
+        display: flex;
+        width: 100%;
+        height: auto;
+
+        &-content{
+          font-size: 1.6rem;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 500;
+          align-self: flex-start;
+          text-align: justify;
+          margin-left: 1%;
+          margin-right: 1%;   
+          margin-top: 1%;
+          flex-direction: column;
+          
+          &-top{
+            display: flex;
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+            cursor: default;
+          }
+
+          &-bottom{
+            display: flex;
+            width: 100%;
+            height: auto; 
+
+            &-content{
+              display: flex;             
+              justify-content: flex-start;  
+              margin: 2% 0% 2% 0%;            
+              padding: 1% 1% 1% 0%;
+              cursor: pointer;  
+              border-bottom: solid rgba($black-color, 1) 3px;   
+              background: linear-gradient(to right,  $black-color 50%, $light-gray-color 50%);   
+              background-size: 201% 101%;
+              background-position: bottom right;
+              transition: all .3s;  
+              text-decoration: none;
+              color: $black-color;
+
+              &-text{
+                display: flex;
+                align-self: center;                
+              }
+
+              &:hover{
+                background-position: bottom left;
+                color: $dark-white-color;
+              }
+            }
+          }
+
+          @include respond(maxNavBar){                                   
+            font-size: 1.2rem;
+            margin-bottom: 3%;          
+          }
+        }
+      }
+
+      &-bottom{
+        display: flex;
+        width: 100%;
+        height: auto;        
+
+        &-content{
+          font-size: 1.6rem;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 600;
+          align-self: flex-start;
+          text-align: justify;
+          margin-left: 1%;
+          margin-right: 1%;   
+          flex-direction: column;
+
+          @include respond(maxNavBar){                                   
+            font-size: 1.2rem;
+            margin-bottom: 3%;          
+          }
+        }
+        
+      }
+
+      @include respond(maxNavBar){
+        width: 100%;
+      } 
+    }
+    @include respond(maxNavBar){
+     flex-direction: column-reverse;
+    } 
+  }
+
+  @include respond(maxNavBar){
+    height: auto;   
+  } 
+}
+
+.education{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  background-image: url(../img/education.jpg);
+  background-size: cover;
+  background-attachment: fixed;  
+
+  &-overlay{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background: rgba($black-color, .5);
+    
+    &-content{
+      display: flex;
+      width: 20%;
+      height: 80%;
+      align-self: center;
+      flex-direction: column;
+      margin: 0% 3% 0% 3%;      
+      background-color: $light-gray-color;      
+      
+      &-top{
+        display: flex;
+        width: 100%;
+        height: auto;
+        padding: 2% 0% 2% 0%;
+        background-color: $darker-gray-color;
+
+        &-content{
+          font-size: 2rem;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 500;
+          align-self: flex-end;
+          margin-left: 1%;
+        }
+      }
+
+      &-bottom{
+        display: flex;
+        width: 100%;
+        
+        &-content{
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+
+          &:first-child{
+            margin-top: 5%;
+          }
+
+          &-title{
+            display: flex;
+            align-self: center;
+            font-size: 1.7rem;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            align-self: flex-start;
+            margin-left: 1%;
+            margin-top: 1%;         
+
+          }
+
+          &-institution{
+            display: flex;
+            align-self: center;
+            font-size: 1.5rem;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            align-self: flex-start;
+            margin-left: 1%;
+            margin-top: 3%;
+          }
+
+          &-duration{
+            display: flex;
+            align-self: center;
+            font-size: 1.5rem;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            align-self: flex-start;
+            margin-left: 1%;
+            margin-top: 1%;
+          }
+         
+        }
+        
+      }
+      @include respond(maxNavBar){
+        width: 90%;
+        height: 100%;
+        margin-top: 3%;   
+        margin-bottom: 3%;     
+      } 
+    }
+
+    @include respond(maxNavBar){
+      flex-direction: column; 
+    } 
+  
+  }
+
+  @include respond(maxNavBar){
+    height: auto;    
+  } 
+  
+}
+
+.work{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  background-color: $light-gray-color;
+
+  &-content{
+    display: flex;
+    width: 100%;
+    height: 90%;
+    align-self: center;
+    
+
+    &-left{
+      display: flex;
+      width: 50%;
+      height: 100%;
+      justify-content: center;            
+
+      &-content{
+        display: flex;
+        width: 95%;
+        height: 95%;
+        align-self: center;
+        flex-direction: column;
+        margin-top: 5%;
+
+        &-first{
+          display: flex;
+          width: 100%;
+          height: auto;          
+
+          &-content{
+            font-size: 1.6rem;
+            font-family: 'Raleway', sans-serif;
+            text-align: justify;
+            hyphens: auto;
+            margin: 0% 1% 0% 1%;
+            line-height: 150%;
+            cursor: default;
+          }
+        }
+        
+        &-second{
+          display: flex;
+          width: 100%;
+          height: 10%;
+          justify-content: center;          
+
+          &-content{
+            width: 50%;
+            font-size: 1.6rem;
+            font-family: 'Raleway', sans-serif;
+            align-self: center;
+            margin-left: 1%;
+            border: none;
+            padding: 1% 0% 1% 0%;
+            
+
+            &:focus{
+              outline: none;
+            }
+          }
+        }
+
+        &-third{
+          display: flex;
+          width: 100%;
+          height: auto;
+         
+
+          &-content{
+            font-size: 1.6rem;
+            font-family: 'Raleway', sans-serif;
+            text-align: justify;
+            hyphens: auto;
+            margin: 0% 1% 0% 1%;
+            line-height: 150%;
+            cursor: default;
+
+            &-span{             
+              border-bottom: solid rgba($black-color, 1) 3px;   
+              background: linear-gradient(to right,  $black-color 50%, $light-gray-color 50%);   
+              background-size: 201% 101%;
+              background-position: bottom right;
+              transition: all .4s;
+              cursor: pointer;
+              text-decoration: none;
+              color: $black-color;
+
+              &:hover{
+                background-position: bottom left;
+                color: $dark-white-color;
+              }
+            }
+          }
+        }
+
+        &-fourth{
+          display: flex;
+          width: 100%;
+          height: 10%;
+          justify-content: center;    
+          margin-top: 2%;      
+
+          &-content{
+            background: linear-gradient(to top, $light-gray-color 50%, $black-color 50%); 
+            background-size: 100% 200%;
+            background-position: top left;
+            transition: all .4s;         
+            padding: 2% 1%;
+            align-self: center;
+            cursor: pointer;
+            color: $light-gray-color;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            
+            &-text{                
+              font-size: 2rem;
+              font-family: 'Raleway', sans-serif;              
+            }
+
+            &:hover{
+              background-position: bottom left;   
+              color: $black-color;    
+              box-shadow: 0px 16px 25px rgba(0, 0, 0, 0.7);       
+            }
+          }
+          
+          @include respond(maxNavBar){
+            margin: 5% 0%;
+          }
+        }
+      }
+      @include respond(maxNavBar){
+        width: 100%;
+      } 
+    }
+
+    &-right{
+      display: flex;
+      width: 50%;
+      height: 100%;
+      justify-content: center;      
+
+      &-content{
+        display: flex;
+        width: 95%;
+        height: 95%;
+        align-self: center;
+        flex-direction: column;
+
+        &-first{
+          display: flex;
+          width: 100%;
+          height: auto;
+          padding: 1% 0%;
+          justify-content: flex-start;     
+          background-color: $darker-gray-color;     
+
+          &-content{
+            display: flex;
+            font-size: 2.2rem;
+            align-self: center;
+            font-weight: 500;
+            font-family: 'Raleway', sans-serif;            
+          }
+        }
+
+        &-second{
+          display: flex;
+          width: 100%;
+          height: auto;
+          flex-direction: column;
+          justify-content: flex-start;    
+          margin-top: 2%;      
+
+          &-company{
+            display: flex;
+            width: 100%;
+            height: 30%;
+            margin-bottom: 1%;
+
+            &-content{
+              display: flex;
+              font-size: 1.5rem;
+              align-self: center;
+              font-weight: 500;
+              font-family: 'Raleway', sans-serif;    
+            }
+          }
+
+          &-location{
+            display: flex;
+            width: 100%;
+            height: 30%;
+            margin-bottom: 1%;
+
+            &-content{
+              display: flex;
+              font-size: 1.5rem;
+              align-self: center;
+              font-weight: 500;
+              font-family: 'Raleway', sans-serif;    
+            }
+          }
+
+          &-duration{
+            display: flex;
+            width: 100%;
+            height: 30%;
+            margin-bottom: 2%;
+
+            &-content{
+              display: flex;
+              font-size: 1.5rem;
+              align-self: center;
+              font-weight: 500;
+              font-family: 'Raleway', sans-serif;    
+            }
+          }
+
+          &-list{
+            display: flex;
+            width: 100%;
+            flex-direction: column;  
+            
+            &:first-child{
+              margin-top: 0;
+            }
+
+            &-item{
+              display: flex;
+              font-size: 1.5rem;
+              align-self: flex-start;
+              font-weight: 400;
+              font-family: 'Raleway', sans-serif;    
+              text-align: justify;
+              margin-top: 2%;
+              hyphens: auto;
+
+            }
+          }
+
+          
+        }
+        
+      }
+      @include respond(maxNavBar){
+        width: 100%;
+      } 
+    }
+    @include respond(maxNavBar){
+      flex-direction: column;
+      align-self: flex-start;
+      height: auto;
+    } 
+  }
+  @include respond(maxNavBar){
+    height: auto;
+  } 
+}
+
+.projects{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/projects.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+
+  &-overlay{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba($black-color, .5);
+
+    &-top{
+      display: flex;
+      width: 100%;
+      height: 10%;
+      justify-content: center;      
+
+      &-content{
+        font-size: 4rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+        align-self: flex-end;
+        color: $dark-white-color;
+
+        @include respond(maxNavBar){
+          font-size: 2.7rem;
+        }
+      } 
+      
+      @include respond(maxNavBar){
+        margin-bottom: 3%;
+      }
+    }
+
+    &-content{
+      display: flex;
+      width: 100%;
+      height: 80%;
+      align-self: center;
+      justify-content: space-between;
+      
+     // background: rgba($black-color, .3);
+
+      &-left{
+        display: flex;
+        width: 5%;
+        height: 100%;
+        align-self: flex-start;
+        justify-content: center;
+        background: rgba($dark-white-color, .5);
+        color: $dark-white-color;
+        cursor: pointer;
+        transition: all .3s;
+
+        &-content{
+          display: flex;
+          align-self: center;
+          font-size: 4rem;
+
+          @include respond(maxNavBar){
+            font-size: 2rem;
+          }
+        }
+
+        &:hover{
+          color: $black-color;
+        }
+
+        @include respond(maxNavBar){
+          width: 10%;
+        }
+      }
+
+      &-right{
+        display: flex;
+        width: 5%;
+        height: 100%;
+        align-self: flex-end;
+        justify-content: center;
+        background: rgba($dark-white-color, .5);
+        color: $dark-white-color;
+        cursor: pointer; 
+        transition: all .3s;
+
+        &-content{
+          display: flex;
+          align-self: center;
+          font-size: 4rem;
+
+          @include respond(maxNavBar){
+            font-size: 2rem;
+          }
+        }
+
+        &:hover{
+          color: $black-color;
+        }
+        @include respond(maxNavBar){
+          width: 10%;
+        }
+      }
+
+      &-center{
+        display: flex;
+        width: 33.33%;
+        height: 85%;
+        align-self: center;
+        flex-direction: column;
+        background-color: $light-gray-color;
+        box-shadow: 15px 8px 10px rgba(255, 255, 255, 0.5);
+
+        &-img{
+          display: flex;
+          width: 100%;
+          height: 50%;          
+
+         img{
+           width: 100%;
+           height: auto;
+         }
+          
+        }
+
+        &-head{
+          display: flex;
+          width: 100%;
+          height: 10%; 
+          background-color: $darker-gray-color;         
+
+          &-content{
+            display: flex;
+            align-self: center;
+            margin-left: 2%;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            font-size: 2.1rem;
+
+            @include respond(maxNavBar){
+              font-size: 1.5rem;
+            }
+          }
+        }
+
+        &-description{
+          display: flex;
+          width: 100%;
+          height: 20%;            
+
+          &-content{
+            display: flex;
+            align-self: flex-start;
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            font-size: 1.4rem;
+            text-align: justify;
+            hyphens: auto;
+
+            @include respond(maxNavBar){
+              font-size: 1.3rem;
+            }
+          }
+
+          @include respond(maxNavBar){
+            margin-bottom: 3%;
+          }
+        }
+
+        &-technologies{
+          display: flex;
+          width: 100%;
+          height: 10%;   
+          justify-content: flex-start;           
+
+          &-content{
+            display: flex;
+            align-self: flex-start;
+            margin-left: 2%;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            font-size: 1.4rem;            
+            hyphens: auto;    
+            
+            @include respond(maxNavBar){
+              font-size: 1.3rem;
+            }
+          }
+        }
+
+        &-links{
+          display: flex;
+          width: 100%;
+          height: 10%;          
+
+          &-left{
+            display: flex;
+            width: 50%;
+            height: 100%;
+            justify-content: center;
+            cursor: pointer;
+            text-decoration: none;
+            color: $black-color;   
+            background: linear-gradient(to right,  $black-color 50%, $darker-gray-color 50%);
+            background-size: 201% 101%;
+            background-position: bottom right;
+            transition: all .4s;   
+            border-right: solid $black-color 3px;     
+
+            &-content{
+              display: flex;
+              align-self: center;
+              font-size: 2rem;
+              font-family: 'Raleway', sans-serif;
+              border-bottom: solid $black-color 3px;
+
+              @include respond(maxNavBar){
+                font-size: 1.5rem;
+              }
+            }
+
+            &:hover{
+              background-position: bottom left;
+              color: $dark-white-color;
+            }
+          }
+
+          &-right{
+            display: flex;
+            width: 50%;
+            height: 100%;
+            justify-content: center;
+            cursor: pointer;
+            text-decoration: none;
+            color: $black-color;  
+            background: linear-gradient(to left, $black-color 50%, $darker-gray-color 50%);
+            background-size: 201% 101%;
+            background-position: bottom left; 
+            transition: all .4s;           
+
+            &-content{
+              display: flex;
+              align-self: center;
+              font-size: 2rem;
+              font-family: 'Raleway', sans-serif;
+              border-bottom: solid $black-color 3px;
+
+              @include respond(maxNavBar){
+                font-size: 1.5rem;
+              }
+            }
+
+            &:hover{
+              background-position: bottom right;
+              color: $dark-white-color;
+            }
+          }
+        }
+        @include respond(maxNavBar){
+          width: 90%;
+          height: auto;
+        } 
+      }
+      @include respond(maxNavBar){        
+        height: auto;
+        margin-bottom: 3%;
+      }
+    }
+  }
+  @include respond(maxNavBar){
+    height: auto;
+  } 
+}
+
+.contact{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: $darker-gray-color;
+  justify-content: center;
+
+  &-content{
+    display: flex;
+    width: 100%;
+    height: 90%;
+    align-self: center;
+    flex-direction: column;    
+
+    &-top{
+      display: flex;
+      width: 100%;
+      height: 10%;
+      justify-content: center;      
+
+      &-content{
+        display: flex;
+        align-self: center;
+        background-color: $dark-white-color;
+        padding: 1%;
+        cursor: default;
+
+        &-text{
+          font-size: 3rem;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 500;
+          border-bottom: solid $black-color 3px;
+        }
+      }
+      @include respond(maxNavBar){
+        margin-top: 3%;
+      } 
+    }
+
+    &-pre{
+      display: flex;
+      width: 100%;
+      height: auto;
+      justify-content: center;      
+      cursor: default;
+
+      &-content{
+        display: flex;
+        width: 70%;
+        height: 100%;
+        align-self: center;
+
+        &-text{
+          font-size: 1.6rem;
+          font-family: 'Raleway', sans-serif;
+          text-align: justify;
+          line-height: 130%;
+          hyphens: auto;
+        }
+      }
+    }
+
+    &-form{
+      display: flex;
+      width: 100%;
+      height: 80%;
+      justify-content: center;      
+
+      &-content{
+        display: flex;
+        width: 70%;
+        height: 100%;
+        justify-content: flex-start;
+        flex-direction: column;        
+
+        &-label{
+          font-size: 1.8rem;
+          align-self: center;
+        }
+
+        &-input{
+          display: flex;
+          width: 40%;
+          height: 10%;
+          font-size: 2rem;
+          font-family: 'Raleway', sans-serif;
+          border: none;
+          align-self: center;
+          margin-top: 1%;
+          background-color: $dark-white-color;
+
+          &:first-child{
+            margin-top: 0;
+          }
+
+          &:focus{
+            outline: none;
+          }
+
+          @include respond(maxNavBar){
+            width: 100%;
+          } 
+        }
+
+        &-text{
+          display: flex;
+          width: 40%;
+          height: 60%;
+          margin-top: 1%;
+          align-self: center;
+          font-size: 2rem;
+          font-family: 'Raleway', sans-serif;
+          border: none;
+          background-color: $dark-white-color;
+
+          &:focus{
+            outline: none;
+          }
+          @include respond(maxNavBar){
+            width: 100%;
+          } 
+        }
+
+        &-btn{
+          display: flex;
+          width: 20%;
+          height: 10%;
+          align-self: center;
+          justify-content: center;          
+          margin-top: 1%;
+          cursor: pointer;
+          background: linear-gradient(to top, $light-gray-color 50%, $black-color 50%); 
+          background-size: 100% 200%;
+          background-position: top left;
+          transition: all .4s; 
+          color: $light-gray-color;
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+
+          &-text{
+            display: flex;
+            align-self: center;
+            font-size: 2rem;
+            font-family: 'Raleway', sans-serif;
+          }
+
+          &:hover{
+            background-position: bottom left;   
+            color: $black-color;    
+            box-shadow: 0px 16px 25px rgba(0, 0, 0, 0.7);       
+          }
+
+          @include respond(maxNavBar){
+            width: 50%;
+            margin-bottom: 3%;
+            margin-top: 3%;
+          } 
+        }
+
+        &-social{
+          display: flex;
+          width: 100%;
+          height: 15%;
+          justify-content: center;          
+
+          &-content{
+            display: flex;
+            width: 40%;
+            height: 100%;
+            justify-content: space-evenly;           
+
+            &-item{
+              display: flex;
+              width: 10%;
+              height: 90%;
+              align-self: center;
+              justify-content: center;
+              cursor: pointer;              
+  
+              &-content{
+                display: flex;
+                align-self: center;
+                font-size: 3.5rem;
+                color: $linked-in-blue;
+                text-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7); 
+
+                @include respond(maxNavBar){
+                  font-size: 2.5rem;
+                } 
+                
+              }
+            } 
+            
+            @include respond(maxNavBar){
+              width: 100%;
+            } 
+          }
+
+          
+        }
+      }
+    }
+    @include respond(maxNavBar){
+      height: auto;
+    } 
+  }
+  @include respond(maxNavBar){
+    height: auto;
+  } 
+}
+
+.toTop{
+  display: flex;
+  top: 5%;
+  right: 5%;
+  position: fixed;
+  width: 5%;
+  height: 5%;
+  justify-content: center;
+  border-radius: 5%;
+  cursor: pointer;
+  background: linear-gradient(to top, $dark-white-color 50%, $black-color 50%); 
+  background-size: 100% 200%;
+  background-position: top left;
+  transition: all .4s;
+  text-decoration: none;
+  color: $dark-white-color;
+
+  &-content{
+    font-size: 3rem;
+    align-self: center;
+  }
+
+  &:hover{
+    background-position: bottom left;   
+    color: $black-color;    
+    box-shadow: 0px 16px 25px rgba(0, 0, 0, 0.7);       
+  }
+
+}
+
+.hard{
+  font-weight: 600;
+}
+
+.git{
+  color: $black-color;
+}
+
+.facebook{
+  color: $facebook-blue;
+}
+
+.instagram{
+  color: #d62976;
+}
+
+.missingData{
+  border: solid 3px $red-favourite-color;
+}
+
+.succesMsg{
+  color: $black-color;
+}
+
+.invisible{
+  display: none;  
+}
+
+.visible{
+  display: flex;
+  transition: all .4s;
+}

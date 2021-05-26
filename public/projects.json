@@ -1,0 +1,67 @@
+{
+  "projects": [
+    {
+      "id": "7",
+      "title": "This Web App",
+      "description": "Web app on which users can register and create their playlists and currently listen to preview of tracks. App uses Deezer API for music data and Firebase for user authentication and Firestore for data storage.",
+      "img": "https://res.cloudinary.com/dznfwmloz/image/upload/v1622013941/img/cont/my-site-new-small_cqumkk.jpg",
+      "webUrl": "https://musing-villani-db85cd.netlify.app/",
+      "gitUrl": "https://github.com/jasminkatanic/Your-Playlist",
+      "technologies" : "ReactJS, SASS, Git, Netlify"
+    },
+    {
+      "id": "6",
+      "title": "Your Playlist App",
+      "description": "Web app on which users can register and create their playlists and currently listen to preview of tracks. App uses Deezer API for music data and Firebase for user authentication and Firestore for data storage.",
+      "img": "https://res.cloudinary.com/dznfwmloz/image/upload/v1621368077/img/cont/music-app_uqtadp.jpg",
+      "webUrl": "https://musing-villani-db85cd.netlify.app/",
+      "gitUrl": "https://github.com/jasminkatanic/Your-Playlist",
+      "technologies" : "ReactJS, SASS, Git, Netlify, REST, CRUD, Firebase, Firestore"
+    },
+    {
+      "id": "2",
+      "title": "Psychotherapist REACT App",
+      "description": "A professional static website built for a psychotherapist using React framework, it utilizes a few different layouts through the website. If you like the design help yourself to a repository and happy coding.",
+      "img": "https://res.cloudinary.com/dznfwmloz/image/upload/v1619798420/img/cont/psychotherapist-website_lp1mrt.jpg",
+      "webUrl": "https://www.vahidadjedovic.com/",
+      "gitUrl": "https://github.com/jasminkatanic/Psychotherapist-Website",
+      "technologies" : "ReactJS, SASS, Git, HTML5, Netlify"
+    },
+    {
+      "id": "3",
+      "title": "Cocktail REACT App",
+      "description": "This REACT app fetches data from The Cocktail DB API. Afterwards user can add and remove favorites as well as ingredients. This data is managed through local storage using CRUD operations. If you like the app help yourself to the repository.",
+      "img": "https://res.cloudinary.com/dznfwmloz/image/upload/v1619798381/img/cont/my-drink_vtjrei.jpg",
+      "webUrl": "https://wizardly-davinci-175110.netlify.app/",
+      "gitUrl": "https://github.com/jasminkatanic/Cocktail-Web-App",
+      "technologies" : "ReactJS, SASS, REST, CRUD, Git, HTML5, Netlify"
+    },
+    {
+      "id": "1",
+      "title": "Subscription Website",
+      "description": "Website consists out of two pars admin section for post creation and a user section for regular users to read content. Firebase is used for user registration and management. Website uses Direct Carrier Billing to charge for premium content.",
+      "img": "https://res.cloudinary.com/dznfwmloz/image/upload/v1621962240/img/cont/test-razgovori_elyzku.jpg",
+      "webUrl": "https://www.razgovaraj.ba/",
+      "gitUrl": "https://github.com/jasminkatanic/vahida-v6",
+      "technologies" : "JavaScript, SASS, HTML5, Cloud Functions, Firebase, CRUD, REST, Netlify, Direct Carrier Billing"
+    },
+    {
+      "id": "4",
+      "title": "My Web App With Animations",
+      "description": "My heavily animated domain built using react framework and is also the first project I decided to do use explicitly React framework. App utilizes different animations, charts and even 3D elements if you like app or some elements of it help yourself to the repository.",
+      "img": "https://res.cloudinary.com/dznfwmloz/image/upload/v1619798341/img/cont/havy-effects_i53qcq.jpg",
+      "webUrl": "https://adoring-kilby-b6abeb.netlify.app/",
+      "gitUrl": "https://github.com/jasminkatanic/Animation-Loaded-App",
+      "technologies" : "ReactJS, SASS, Keyframes, Git, Transitions, HTML5, Netlify"
+    },
+    {
+      "id": "5",
+      "title": "Simple React App",
+      "description": "Unlike previous React applications which mostly dependent on static data this web app uses useEffect and useState to fetch data from local JSON files. All the data on this site is presented through fetch and React render. If you like this app or some of its features help yourself to the repository.",
+      "img": "https://res.cloudinary.com/dznfwmloz/image/upload/v1619553883/img/cont/current-web_vetckj.jpg",
+      "webUrl": "https://practical-spence-129c13.netlify.app/",
+      "gitUrl": "https://github.com/jasminkatanic/My-React-App",
+      "technologies" : "ReactJS, SASS, Git, HTML5, Netlify"
+    }
+  ]
+}
